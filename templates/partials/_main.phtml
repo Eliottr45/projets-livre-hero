@@ -52,7 +52,7 @@ require "templates/partials/soeur.phtml";
         {
             require "templates/partials/pretre.phtml";
         }
-        else if(isset($_GET["perso"]) && $_get["perso"] === "pirate")
+        else if(isset($_GET["perso"]) && $_GET["perso"] === "pirate")
         {
             require "templates/partials/pirate.phtml";
         }
@@ -79,6 +79,18 @@ require "templates/partials/soeur.phtml";
         else if(isset($_GET["choix_licorne"]) && $_GET["choix_licorne"] === "hisser_voile")
         {
             require "templates/partials/hisser.phtml";
+        }
+        else if(isset($_GET["choix_pont"]) && $_GET["choix_pont"] === "bureau")
+        {
+            require "templates/partials/bureau.phtml";
+        }
+        else if(isset($_GET["choix_pont"]) && $_GET["choix_pont"] === "cale")
+        {
+            require "templates/partials/cale.phtml";
+        }
+        else if(isset($_GET["choix_pont"]) && $_GET["choix_pont"] === "capitaine")
+        {
+            require "templates/partials/capitaine.phtml";
         }
         else
         {
