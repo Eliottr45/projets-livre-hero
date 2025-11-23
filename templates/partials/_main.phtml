@@ -1,0 +1,88 @@
+<main>
+    <?php
+/*utilisation de claude pour le lien entre les pages et les isset prompt: j'essaye de créer une sorte de livre dont l'utilisateur est le héros sauf que dans mon code je lie plusieurs pages entres elles pour que l'histoire se déroule. Or le lien grace au get ne s'effectue pas, peut tu me dire d'ou viens le problèmes ? 
+Voici mon code : 
+<main>
+    <h2>
+        Le début de l'aventure...
+</h2>
+<form id="formulaire" method="get" action="index.php">
+<fieldset>
+<select name="perso" id="persoChoice">
+<option value="cow-boy">Lenny Morgan</option>
+<option vlaue="pretre">Don Jean François</option>
+</select>
+</fieldset>
+<fieldset>
+<button type="submit">Choisir</button>
+</fieldset>
+</form>
+<?php
+if($_GET["perso"]=== "cow-boy")
+        {
+require "templates/partials/cow-boy.phtml";
+        }
+else if($_GET["perso"] === "pretre")
+        {
+require "templates/partials/pretre.phtml";
+        }
+else if($_GET["choix_eglise"] === "briguand")
+        {
+require "templates/partials/briguand.phtml";
+        }
+else if($_GET["choix_eglise"] === "soeur")
+        {
+require "templates/partials/soeur.phtml";
+        }
+?>
+*/
+        if(isset($_GET["choix_eglise"]) && $_GET["choix_eglise"] === "briguand") 
+        {
+        require "templates/partials/briguand.phtml";
+        }
+        else if(isset($_GET["choix_eglise"]) && $_GET["choix_eglise"] === "soeur")
+        {
+            require "templates/partials/soeur.phtml";
+        }
+        else if(isset($_GET["perso"]) && $_GET["perso"] === "cow-boy")
+        {
+            require "templates/partials/cow-boy.phtml";
+        }
+        else if(isset($_GET["perso"]) && $_GET["perso"] === "pretre")
+        {
+            require "templates/partials/pretre.phtml";
+        }
+        else if(isset($_GET["perso"]) && $_get["perso"] === "pirate")
+        {
+            require "templates/partials/pirate.phtml";
+        }
+        else if(isset($_GET["choix_marecage"]) && $_GET["choix_marecage"] === "cabane")
+        {
+            require "templates/partials/cabane.phtml";
+        }
+        else if(isset($_GET["choix_marecage"]) && $_GET["choix_marecage"] === "enfoncer")
+        {
+            require "templates/partials/enfoncer.phtml";
+        }
+        else if(isset($_GET["choix_marecage"]) && $_GET["choix_marecage"] === "prier")
+        {
+            require "templates/partials/prier.phtml";
+        }
+        else if(isset($_GET["choix_licorne"]) && $_GET["choix_licorne"] === "abordage")
+        {
+            require "templates/partials/abordage.phtml";
+        }
+        else if(isset($_GET["choix_licorne"]) && $_GET["choix_licorne"] === "canon")
+        {
+            require "templates/partials/canon.phtml";
+        }
+        else if(isset($_GET["choix_licorne"]) && $_GET["choix_licorne"] === "hisser_voile")
+        {
+            require "templates/partials/hisser.phtml";
+        }
+        else
+        {
+            require "templates/partials/start.phtml";
+        }
+        ?>
+</main>
