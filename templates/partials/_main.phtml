@@ -92,6 +92,38 @@ require "templates/partials/soeur.phtml";
         {
             require "templates/partials/capitaine.phtml";
         }
+        else if(isset($_GET["choix_saloon"]) && $_GET["choix_saloon"] === "sortir")
+        {
+            require "templates/partials/sortir.phtml";
+        }
+        else if(isset($_GET["choix_saloon"]) && $_GET["choix_saloon"] === "stopper")
+        {
+            require "templates/partials/stopper.phtml";
+        }
+        else if(isset($_GET["choix_saloon"]) && $_GET["choix_saloon"] === "duel")
+        {
+            require "templates/partials/duel.phtml";
+        }
+        else if(isset($_GET["choix_braquage"]) && $_GET["choix_braquage"] === "banque")
+        {
+            require "templates/partials/banque.phtml";
+        }
+        else if(isset($_GET["choix_braquage"]) && $_GET["choix_braquage"] === "armurie")
+        {
+            require "templates/partials/armurie.phtml";
+        }
+        else if(isset($_GET["choix_braquage"]) && $_GET["choix_braquage"] === "veuve")
+        {
+            require "templates/partials/veuve.phtml";
+        }
+        else if(isset($_GET["choix_veuve"]) && $_GET["choix_veuve"] === "avant")
+        {
+            require "templates/partials/avant.phtml";
+        }
+        else if(isset($_GET["choix_veuve"]) && $_GET["choix_veuve"] === "arriere")
+        {
+            require "templates/partials/arriere.phtml";
+        }
         else
         {
             require "templates/partials/start.phtml";
